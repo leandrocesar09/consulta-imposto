@@ -4,7 +4,7 @@ const ApiBuilder = require('claudia-api-builder'),
 var api = new ApiBuilder(),
     dynamoDb = new AWS.DynamoDB.DocumentClient();
 
-api.post('/icms', function (request) { // SAVE
+api.post('/icms', function (request) {
     var params = {
         TableName: 'icms',
         Item: {
@@ -16,13 +16,13 @@ api.post('/icms', function (request) { // SAVE
 }, {success: 201});
 
 
-api.get('/icms', function (request) { // GET all
+api.get('/icms', function (request) {
     return dynamoDb.scan({TableName: 'icms'}).promise()
             .then(response => response.Items
     )
 });
 
-api.get('/versao', function (request) { // GET all
+api.get('/versao', function (request) {
     return '0.0.1';
 });
 
