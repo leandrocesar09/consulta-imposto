@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "consulta-imposto-executor",
+    "name": "consulta-imposto",
+    "region": "us-east-2"
+  },
+  "api": {
+    "id": "pluh6kymy9",
+    "module": "index"
+  }
+}
