@@ -23,7 +23,7 @@ api.get('/icms', function (request) {
 });
 
 api.get('/versao', function (request) {
-    return '0.0.2';
+    return '0.0.3';
 });
 
 module.exports = api;
